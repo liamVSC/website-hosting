@@ -7,3 +7,5 @@ Reusable static templates for ProperSite's £50, £100 and £150 local-business 
 - `templates/premium` — £150 premium presentation site.
 
 The main site presents the ProperSite brand and package offer. Plain HTML/CSS, no framework or build dependency. Replace bracketed placeholders before delivery. Forms require a real endpoint before use.
+
+Cloudflare production build trigger.
