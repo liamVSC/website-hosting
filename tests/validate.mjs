@@ -9,8 +9,8 @@ for(const forbidden of ["hello@example.com","0151 000 0000","[YOUR EMAIL]","PROJ
 for(const marker of ["/api/auth/register","/api/auth/login","/api/auth/logout","/api/auth/me","/api/account/dashboard","/api/checkout","/api/maintenance-request","/api/maintenance/","/api/admin/dashboard","/api/admin/maintenance/","/api/stripe-webhook","STRIPE_SECRET_KEY","STRIPE_WEBHOOK_SECRET","pbkdf2$120000","stripeRequest("])if(!worker.includes(marker))throw new Error(`Integration missing: ${marker}`);
 if(!home.includes('href="maintenance.html"'))throw new Error("Maintenance CTA missing.");
 if(!maintenance.includes('id="maintenance-form"'))throw new Error("Maintenance form missing.");
-const account=await readFile("public/account.html","utf8");const admin=await readFile("public/admin.html","utf8");const schema=await readFile("migrations/0001_accounts.sql","utf8");
-for(const marker of ["auth-form","dashboard-view","api/auth/login","api/account/dashboard"])if(!account.includes(marker))throw new Error(`Account UI missing: ${marker}`);
-for(const marker of ["api/admin/dashboard","api/admin/maintenance/"])if(!admin.includes(marker)||!worker.includes(marker))throw new Error(`Admin integration missing: ${marker}`);
+const account=await readFile("public/account.html","utf8");const accountJs=await readFile("public/account.js","utf8");const admin=await readFile("public/admin.html","utf8");const adminJs=await readFile("public/admin.js","utf8");const schema=await readFile("migrations/0001_accounts.sql","utf8");
+for(const marker of ["auth-form","dashboard-view"])if(!account.includes(marker))throw new Error(`Account UI missing: ${marker}`);for(const marker of ["/api/auth/login","/api/account/dashboard"])if(!accountJs.includes(marker))throw new Error(`Account integration missing: ${marker}`);
+for(const marker of ["api/admin/dashboard","api/admin/maintenance/"])if(!adminJs.includes(marker)||!worker.includes(marker))throw new Error(`Admin integration missing: ${marker}`);
 for(const marker of ["CREATE TABLE IF NOT EXISTS users","CREATE TABLE IF NOT EXISTS orders","CREATE TABLE IF NOT EXISTS websites","CREATE TABLE IF NOT EXISTS maintenance_requests","CREATE TABLE IF NOT EXISTS payments"])if(!schema.includes(marker))throw new Error(`D1 schema missing: ${marker}`);
 console.log("ProperSite validation passed.");
