@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en-GB">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Request a one-off ProperSite website change, update or fix.">
+<meta name="theme-color" content="#171817"><meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="./favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="./maintenance.css">
+<title>Maintenance & updates | ProperSite</title></head>
+<body>
+<header class="order-nav"><a class="brand" href="./">PROPER<span>SITE</span></a><a class="back" href="./#maintenance">Back to ProperSite</a></header>
+<main>
+<section class="intro"><p class="eyebrow">One-off maintenance</p><h1>Need something changed or fixed?</h1><p>Tell me what you need. There is no monthly maintenance fee. I’ll review the request, confirm the price before any charge, and then arrange secure Stripe payment when you approve the quote.</p></section>
+<form id="maintenance-form" class="maintenance-form">
+<div class="form-card"><div class="step-heading"><span>01</span><div><p class="eyebrow">Your details</p><h2>Who is this for?</h2></div></div>
+<div class="field-grid">
+<label>Full name <span>*</span><input name="name" autocomplete="name" required maxlength="120" placeholder="Your name"></label>
+<label>Business name <span>*</span><input name="business" autocomplete="organization" required maxlength="160" placeholder="Your business name"></label>
+<label>Email address <span>*</span><input type="email" name="email" autocomplete="email" required maxlength="254" placeholder="you@yourbusiness.co.uk"></label>
+<label>Website address <small>optional</small><input name="website" type="url" maxlength="500" placeholder="https://yourwebsite.co.uk"></label>
+</div></div>
+<div class="form-card"><div class="step-heading"><span>02</span><div><p class="eyebrow">The work</p><h2>What needs changing?</h2></div></div>
+<label>What do you need? <span>*</span><textarea name="request" required maxlength="3000" placeholder="Tell me exactly what you want changed, added or fixed. Include links, wording, pages or anything else that will help."></textarea></label>
+<label>How urgent is it? <small>optional</small><select name="urgency"><option value="normal">Normal</option><option value="soon">I’d like it soon</option><option value="urgent">Urgent — tell me if there is an extra charge</option></select></label>
+</div>
+<aside class="quote-card"><p class="eyebrow">03 · Quote first</p><h2>No surprise charge.</h2><p>Maintenance is priced per job, not as a subscription. I’ll confirm what the work costs before you pay.</p><ul><li>Small updates can be quoted quickly.</li><li>Fixes are reviewed before payment.</li><li>Larger changes get a clear quote.</li><li>Payment is handled securely by Stripe.</li></ul>
+<button class="pay-button" type="submit"><span>Send maintenance request</span><b>→</b></button><p id="form-status" class="form-status" role="status" aria-live="polite"></p></aside>
+</form>
+<p class="legal-links"><a href="./privacy.html">Privacy</a><span>·</span><a href="./terms.html">Terms</a></p>
+</main><script src="./maintenance.js"></script></body></html>
