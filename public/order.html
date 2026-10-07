@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en-GB">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Tell ProperSite exactly what you want built, then continue to secure payment."><title>Order your website | ProperSite</title><link rel="stylesheet" href="./order.css"></head>
+<body>
+<header class="order-nav"><a class="brand" href="./">PROPER<span>SITE</span></a><a class="back" href="./#packages">Back to packages</a></header>
+<main>
+<section class="intro"><p class="eyebrow">Website order</p><h1>Tell me exactly what you want.</h1><p>Take your time. The more detail you give me here, the closer the first version will be to what you have in mind.</p></section>
+<form id="order-form" class="order-layout">
+<div class="form-card"><div class="step-heading"><span>01</span><div><p class="eyebrow">Your business</p><h2>Start with the basics</h2></div></div><div class="field-grid">
+<label>Full name <span>*</span><input name="name" autocomplete="name" required maxlength="120" placeholder="Your name"></label>
+<label>Business name <span>*</span><input name="business" autocomplete="organization" required maxlength="160" placeholder="Your business name"></label>
+<label>Email address <span>*</span><input type="email" name="email" autocomplete="email" required maxlength="254" placeholder="you@example.com"></label>
+<label>Phone number <small>optional</small><input name="phone" autocomplete="tel" maxlength="40" placeholder="0151..."></label></div>
+<label>What do you want the website to achieve? <span>*</span><textarea name="goal" required maxlength="1200" placeholder="For example: I want more people to call me for quotes, understand my services and trust that I am reliable."></textarea></label></div>
+<div class="form-card"><div class="step-heading"><span>02</span><div><p class="eyebrow">Your website</p><h2>Tell me what needs to be on it</h2></div></div>
+<label>Pages or sections you want <small>optional</small><textarea name="pages" maxlength="1200" placeholder="Home, About, Services, Gallery, Reviews, FAQ, Contact..."></textarea></label>
+<label>What services or products do you offer? <small>optional</small><textarea name="services" maxlength="1600" placeholder="List your main services/products and anything important customers should know."></textarea></label>
+<label>What content do you already have? <small>optional</small><textarea name="content" maxlength="1600" placeholder="Text, prices, reviews, opening hours, FAQs, etc. Tell me what you already have and what you need help with."></textarea></label></div>
+<div class="form-card"><div class="step-heading"><span>03</span><div><p class="eyebrow">The look</p><h2>Give me your direction</h2></div></div>
+<label>How should it look and feel? <small>optional</small><textarea name="style" maxlength="1200" placeholder="Colours, mood, fonts, clean/bold/luxury/friendly, anything you definitely want or don't want."></textarea></label>
+<label>Photos, logo and other files <small>optional</small><textarea name="assets" maxlength="1200" placeholder="Tell me what you have. You can send the actual files after ordering if needed."></textarea></label>
+<label>Websites you like <small>optional</small><textarea name="examples" maxlength="1200" placeholder="Paste links or describe examples you like and what you like about them."></textarea></label></div>
+<div class="form-card"><div class="step-heading"><span>04</span><div><p class="eyebrow">Practical details</p><h2>Anything else I should know?</h2></div></div>
+<label>Domain name <small>optional</small><input name="domain" maxlength="500" placeholder="yourbusiness.co.uk — or say if you need one"></label>
+<label>Anything else you want included? <small>optional</small><textarea name="requirements" maxlength="2400" placeholder="Special features, booking links, social links, wording, competitors, deadlines or anything else you want me to know."></textarea></label>
+<div class="privacy-note"><strong>Keep payment details out of this form.</strong><p>Card details will be handled securely by Stripe after you submit your website brief.</p></div></div>
+<aside class="checkout-card"><p class="eyebrow">05 · Choose & pay</p><h2>Pick your package.</h2><p>Your brief will travel with your order so I have everything in one place.</p>
+<div class="package-options">
+<label class="package-option"><input type="radio" name="package" value="starter" checked><span><strong>£50</strong><b>Starter</b><small>One-page website</small></span></label>
+<label class="package-option"><input type="radio" name="package" value="business"><span><strong>£100</strong><b>Business</b><small>Fuller business website</small></span></label>
+<label class="package-option"><input type="radio" name="package" value="premium"><span><strong>£150</strong><b>Premium</b><small>More distinctive presentation</small></span></label></div>
+<button class="pay-button" type="submit"><span>Continue to secure payment</span><b>→</b></button><p id="form-status" class="form-status" role="status" aria-live="polite"></p><p class="secure">Secure checkout · Your card details never touch ProperSite.</p></aside>
+</form></main><script src="./order.js"></script></body></html>
