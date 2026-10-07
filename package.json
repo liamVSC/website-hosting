@@ -2,7 +2,7 @@
   "name": "website-hosting",
   "private": true,
   "scripts": {
-    "deploy": "wrangler deploy"
+    "deploy": "wrangler deploy --assets ./public"
   },
   "devDependencies": {
     "wrangler": "4.148.0"
