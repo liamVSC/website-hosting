@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#171817"><meta name="robots" content="noindex,nofollow"><link rel="icon" href="./favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="./account.css"><title>Your ProperSite account</title></head>
+<body>
+<header class="account-nav"><a class="brand" href="./">PROPER<span>SITE</span></a><a href="./order.html">Order a website →</a></header>
+<main>
+<section id="auth-view" class="auth-shell">
+<div class="intro"><p class="eyebrow">Customer account</p><h1>Everything about your ProperSite in one place.</h1><p>Track orders, see your website status, review maintenance requests and keep your details together.</p></div>
+<div class="auth-card">
+<div class="auth-tabs"><button class="tab active" data-mode="login">Sign in</button><button class="tab" data-mode="register">Create account</button></div>
+<form id="auth-form">
+<div id="register-fields" class="hidden"><label>Full name<input name="name" autocomplete="name" maxlength="120"></label><label>Business name<input name="business" autocomplete="organization" maxlength="160"></label></div>
+<label>Email address<input type="email" name="email" autocomplete="email" required maxlength="254"></label>
+<label>Password<input type="password" name="password" autocomplete="current-password" minlength="10" maxlength="128" required><small>At least 10 characters.</small></label>
+<button class="button primary" type="submit"><span>Sign in</span> →</button>
+<p id="auth-status" class="status" role="status" aria-live="polite"></p>
+</form>
+<p class="fine">Your account is secured with a server-side password hash and an HttpOnly session cookie.</p>
+</div></section>
+<section id="dashboard-view" class="dashboard hidden">
+<div class="dashboard-head"><div><p class="eyebrow">Customer dashboard</p><h1 id="welcome">Welcome back.</h1><p id="account-email"></p></div><button id="logout" class="button ghost">Sign out</button></div>
+<div id="dashboard-status" class="status" role="status" aria-live="polite"></div>
+<div class="stats" id="stats"></div>
+<div class="panel"><div class="panel-head"><div><p class="eyebrow">Orders</p><h2>Your websites</h2></div><a class="button small" href="./order.html">Order another →</a></div><div id="orders" class="stack"></div></div>
+<div class="panel"><div class="panel-head"><div><p class="eyebrow">Website</p><h2>Current sites</h2></div></div><div id="websites" class="stack"></div></div>
+<div class="panel"><div class="panel-head"><div><p class="eyebrow">Maintenance</p><h2>Request a change or fix</h2></div></div>
+<form id="maintenance-form" class="maintenance-form"><label>Website<select name="website" id="website-select"><option value="">My ProperSite website</option></select></label><label>What needs changing or fixing?<textarea name="request" required maxlength="3000" placeholder="Tell me exactly what you want changed, what is broken, and what the finished result should be."></textarea></label><label>Urgency<select name="urgency"><option value="normal">Normal</option><option value="soon">Soon</option><option value="urgent">Urgent</option></select></label><button class="button primary" type="submit">Send request →</button><p id="maintenance-status" class="status"></p></form>
+<div id="maintenance-list" class="stack"></div></div>
+<div class="panel"><div class="panel-head"><div><p class="eyebrow">Payments</p><h2>Payment history</h2></div></div><div id="payments" class="stack"></div></div>
+</section>
+</main>
+<footer><a href="./privacy.html">Privacy</a> · <a href="./terms.html">Terms</a> · <a href="./">ProperSite</a></footer>
+<script src="./account.js"></script></body></html>
