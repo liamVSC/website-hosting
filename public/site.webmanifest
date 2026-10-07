@@ -1,0 +1,10 @@
+{
+  "name": "ProperSite",
+  "short_name": "ProperSite",
+  "description": "Proper websites. Simple prices.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f5ef",
+  "theme_color": "#171817",
+  "lang": "en-GB"
+}
