@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: 24
           cache: npm
-      - run: npm ci
+      - run: npm install --no-audit --no-fund
       - run: node --check src/index.js
       - run: node --check public/order.js
       - run: node tests/validate.mjs
