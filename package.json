@@ -2,8 +2,9 @@
   "name": "website-hosting",
   "private": true,
   "scripts": {
-    "deploy": "wrangler deploy --assets ./public",
-    "test": "node tests/validate.mjs"
+    "deploy": "npm run db:migrate && wrangler deploy --assets ./public",
+    "test": "node tests/validate.mjs",
+    "db:migrate": "wrangler d1 migrations apply DB --remote"
   },
   "devDependencies": {
     "wrangler": "4.148.0"
